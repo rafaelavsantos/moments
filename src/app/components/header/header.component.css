@@ -1,0 +1,43 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  background-color: #F4C101;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.logo, .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 0.6em;
+}
+
+.logo h2 {
+  transition: .4s;
+}
+
+.logo:hover > h2 {
+  color: #F4C101;
+}
+
+.links li {
+  margin-right: 1em;
+  list-style: none;
+  
+}
+
+#home a {
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+#home a:hover {
+  background-color: #faf6e3;
+  border-radius: 6px;
+}
