@@ -3,10 +3,11 @@ nav {
   justify-content: space-between;
   padding: 0.8em;
   background-color: #F4C101;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.logo, .links {
+.logo,
+.links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,23 +22,23 @@ nav {
   transition: .4s;
 }
 
-.logo:hover > h2 {
-  color: #F4C101;
+.logo:hover>h2 {
+  color: #000;
 }
 
 .links li {
-  margin-right: 1em;
   list-style: none;
-  
+  padding: 6px;
+  transition: .4s;
+}
+
+.links li:hover {
+  background-color: #ffffff70;
+  border-radius: 6px;
 }
 
 #home a {
   color: #000;
   font-weight: bold;
   border-radius: 20px;
-}
-
-#home a:hover {
-  background-color: #faf6e3;
-  border-radius: 6px;
 }

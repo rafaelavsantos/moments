@@ -1,18 +1,18 @@
 footer {
-  border-top: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid #F4C101;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 150px;
   background-color: #F5D6A5;
+  padding: 1em 0;
+  font-weight: bold;
 }
 
-footer h3 {
-  margin-bottom: 1.2em;
+footer p {
+  padding-bottom: 0.3em;
 }
 
 footer span {
-  font-weight: bold;
   color: #F59900;
 }
