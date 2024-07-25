@@ -1,24 +1,24 @@
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
   <div class="form-group">
     <label>Título:</label>
-    <input type="text" id="inTitulo" required placeholder="Informe o titulo" formControlName="titulo">
+    <input type="text" id="inTitle" required placeholder="Informe o title" formControlName="title">
 
-    <div *ngIf="titulo.invalid && formDir.submitted" class="validation-error">
-      <p *ngIf="titulo.errors?.['required']">O título é obrigatório!</p>
+    <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="title.errors?.['required']">O título é obrigatório!</p>
     </div>
   </div>
   <div class="form-group">
     <label>Descrição:</label>
-    <textarea id="textDescricao" placeholder="Descreva o momento ..." style="resize: none;" required
-      formControlName="descricao"></textarea>
+    <textarea id="textDescription" placeholder="Descreva o momento ..." style="resize: none;" required
+      formControlName="description"></textarea>
 
-    <div *ngIf="descricao.invalid && formDir.submitted" class="validation-error">
-      <p *ngIf="descricao.errors?.['required']">A descrição é obrigatória!</p>
+    <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="description.errors?.['required']">A descrição é obrigatória!</p>
     </div>
   </div>
   <div class="form-group">
     <label>Upload de Imagem do Momento:</label>
-    <input type="file">
+    <input type="file" (change)="onFileSelected($event)">
   </div>
   <input type="submit" value="{{ btnText }}">
 </form>

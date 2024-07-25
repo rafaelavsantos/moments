@@ -30,8 +30,8 @@ form {
   margin-bottom: .4em;
 }
 
-#inTitulo,
-#textDescricao {
+#inTitle,
+#textDescription {
   padding: .6em;
   font-size: 0.8em;
   border-radius: 4px;
@@ -39,12 +39,12 @@ form {
   background-color: #efefef;
 }
 
-#textDescricao {
+#textDescription {
   height: 100px;
 }
 
-#inTitulo:focus,
-#textDescricao:focus {
+#inTitle:focus,
+#textDescription:focus {
   outline-color: #cccccc;
 }
 
