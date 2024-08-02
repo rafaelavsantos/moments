@@ -31,15 +31,10 @@ export class HomeComponent implements OnInit {
 
       data.map((item) => {
         item.created_at = item.created_at.slice(0, 10).split("-").reverse().join("/");
-        console.log(item.created_at)
-        // item.created_at = new Date(item.created_at).toLocaleDateString('pt-BR');
       });
-
 
       this.allMoments = data;
       this.moments = data;
-
-      console.log(this.moments)
     })
   }
 
