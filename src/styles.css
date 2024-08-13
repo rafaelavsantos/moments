@@ -76,3 +76,37 @@ input[type="submit"]:hover {
   padding-left: 0.2em;
   font-size: 0.8em;
 }
+
+.edit-btn,
+.remove-btn {
+  padding: 0.4em 1em;
+  font-size: 1em;
+  margin: 0.5em;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #fff;
+}
+
+.edit-btn path,
+.remove-btn path {
+  color: #fff;
+}
+
+.edit-btn {
+  border: 1px solid darkgreen;
+  background-color: green;
+}
+
+.edit-btn:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.remove-btn {
+  border: 1px solid red;
+  background-color: #dc3545;
+}
+
+.remove-btn:hover {
+  opacity: 0.8;
+}
