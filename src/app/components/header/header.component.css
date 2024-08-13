@@ -2,7 +2,6 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0.8em;
-  background-color: #F4C101;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -23,7 +22,7 @@ nav {
 }
 
 .logo:hover>h2 {
-  color: #000;
+  color: #F59900;
 }
 
 .links li {
@@ -38,7 +37,7 @@ nav {
 }
 
 #home a {
-  color: #000;
+  color: #F59900;
   font-weight: bold;
   border-radius: 20px;
 }

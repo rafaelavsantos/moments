@@ -13,6 +13,10 @@ a {
   color: #333;
 }
 
+a:hover {
+  color: #F59900;
+}
+
 form {
   width: 450px;
   margin: 0 auto;

@@ -6,7 +6,7 @@
 }
 
 .home-container h1 {
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .moments-container {
@@ -59,4 +59,32 @@ p {
 
 .moment a:hover {
   opacity: 0.9;
+}
+
+.search-container {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.search-container form {
+  width: 30%;
+  position: relative;
+}
+
+.search-container fa-icon {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+
+.search-container input {
+  background-color: #EFEFEF;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.search-container input:focus {
+  outline-color: #ccc;
 }

@@ -3,11 +3,13 @@ import { Moment } from '../../Moment';
 import { MomentService } from '../../services/moment.service';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf, RouterLink, FaIconComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -23,6 +25,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private momentService: MomentService) { }
 
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   ngOnInit(): void {
     // Inicializar a função de busca
@@ -38,5 +42,12 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
 
+    this.moments = this.allMoments.filter((moment) => {
+      return moment.title.toLowerCase().includes(value);
+    });
+  }
 }

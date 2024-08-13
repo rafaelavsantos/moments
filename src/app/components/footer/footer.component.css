@@ -1,18 +1,19 @@
 footer {
-  border-top: 1px solid #F4C101;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #F5D6A5;
+  background-color: #1f1f1f;
   padding: 1em 0;
   font-weight: bold;
+  height: 100px;
 }
 
 footer p {
-  padding-bottom: 0.3em;
+  padding-bottom: 0.5em;
+  color: #F59900;
 }
 
 footer span {
-  color: #F59900;
+  color: #fff;
 }
