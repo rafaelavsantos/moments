@@ -32,10 +32,13 @@ form {
   font-weight: bold;
   font-size: 0.9em;
   margin-bottom: .4em;
+  text-align: left;
 }
 
 #inTitle,
-#textDescription {
+#textDescription,
+#inComment,
+#inName {
   padding: .6em;
   font-size: 0.8em;
   border-radius: 4px;
@@ -43,12 +46,16 @@ form {
   background-color: #efefef;
 }
 
-#textDescription {
+#textDescription,
+#inComment {
   height: 100px;
+  resize: none;
 }
 
 #inTitle:focus,
-#textDescription:focus {
+#textDescription:focus,
+#inComment:focus,
+#inName:focus {
   outline-color: #cccccc;
 }
 

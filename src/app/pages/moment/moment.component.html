@@ -19,9 +19,38 @@
   </div>
 
   <!-- [Area dos comentarios] -->
-  <div class="coment">
-    <h3>Comentários (0): </h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus est molestias nesciunt quos exercitationem
-      ullam eaque mollitia et tempore excepturi, beatae reiciendis ipsa? Dolores sit tempore voluptas vitae ipsa et?</p>
+  <div class="coments">
+    <h3>Comentários ({{ moment.comments.length > 0 ? moment.comments.length : 0 }}): </h3>
+    <div *ngIf="moment.comments.length > 0; else noComments">
+      <div class="comment-container" *ngFor="let comment of moment.comments">
+        <p class="comment">{{ comment.text }}</p>
+        <p class="author"><span>por: </span>{{ comment.username }}</p>
+      </div>
+    </div>
+    <ng-template #noComments>
+      <p>Não há comentários</p>
+    </ng-template>
+  </div>
+  <div class="comment-form">
+    <h3>Deixe um comentário: </h3>
+    <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+      <div class="form-group">
+        <label>Comentário: </label>
+        <textarea formControlName="text" id="inComment" placeholder="Deixe um comentário" required></textarea>
+
+        <div *ngIf="text.invalid && formDir.submitted" class="validation-error text-error">
+          <p *ngIf="text.errors?.['required']">O texto é obrigatório!</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Nome: </label>
+        <input formControlName="username" type="text" id="inName" placeholder="Digite seu nome">
+
+        <div *ngIf="username.invalid && formDir.submitted" class="validation-error text-error">
+          <p *ngIf="username.errors?.['required']">O nome é obrigatório!</p>
+        </div>
+      </div>
+      <input type="submit" value="Comentar">
+    </form>
   </div>
 </div>
